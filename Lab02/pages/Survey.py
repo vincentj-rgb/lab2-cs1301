@@ -1,4 +1,4 @@
-der# This creates the page for users to input data.
+# This creates the page for users to input data.
 # The collected data should be appended to the 'data.csv' file.
 
 import streamlit as st
