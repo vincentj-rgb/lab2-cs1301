@@ -40,7 +40,6 @@ with st.form("survey_form"):
         new_data=pd.DataFrame({"Hours":[hours_input]})
         new_data.to_csv(file_path,mode = "a", index=False)
         st.success("Your data has been submitted!")
-        st.write(f"You entered: **Category:** {category_input}, **Value:** {value_input}")
 
 
 # DATA DISPLAY
