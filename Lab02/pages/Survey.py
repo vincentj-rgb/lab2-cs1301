@@ -36,7 +36,7 @@ with st.form("survey_form"):
         #    - You can use pandas or Python's built-in 'csv' module.
         #    - Make sure to open the file in 'append' mode ('a').
         #    - Don't forget to add a newline character '\n' at the end.
-        file_path='data.csv'
+        file_path='../data.csv'
         write_header = not os.path.exists(file_path)
         new_data=pd.DataFrame({"Hours":[hours_input]})
         new_data.to_csv(file_path,mode = "a", header=write_header, index=False)
@@ -49,9 +49,9 @@ st.divider() # Adds a horizontal line for visual separation.
 st.header("Current Data in CSV")
 
 # Check if the CSV file exists and is not empty before trying to read it.
-if os.path.exists('data.csv') and os.path.getsize('data.csv') > 0:
+if os.path.exists('../data.csv') and os.path.getsize('../data.csv') > 0:
     # Read the CSV file into a pandas DataFrame.
-    current_data_df = pd.read_csv('data.csv')
+    current_data_df = pd.read_csv('../data.csv')
     # Display the DataFrame as a table.
     st.dataframe(current_data_df)
 else:
