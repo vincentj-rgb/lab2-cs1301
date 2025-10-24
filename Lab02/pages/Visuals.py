@@ -26,7 +26,7 @@ st.write("This page displays graphs based on the collected data.")
 # 1. Load the data from 'data.csv' into a pandas DataFrame.
 #    - Use a 'try-except' block or 'os.path.exists' to handle cases where the file doesn't exist.
 try:
-    all_my_hours_df = pd.read_csv("data.csv")
+    all_my_hours_df = pd.read_csv("../data.csv")
 except Exception as e:
     st.error(f"failed csv")
     st.stop()
@@ -39,7 +39,7 @@ except Exception as e:
 # 2. Load the data from 'data.json' into a Python dictionary.
 #    - Use a 'try-except' block here as well.
 try:
-    with open('data.json') as f:
+    with open('../data.json') as f:
         json_contents = json.load(f)
     
     title_from_json = json_contents['chart_title']
