@@ -28,6 +28,7 @@ st.write("This page displays graphs based on the collected data.")
 try:
     all_my_hours_df = pd.read_csv("data.csv")
 except Exception as e:
+    st.error(f"failed csv")
     st.stop()
     #I have it read the data from the csv file
     #if it doesnt work, itll stop from the except
@@ -46,6 +47,7 @@ try:
 
     all_json_data_df = pd.DataFrame(data_points_from_json)
 except Exception as e:
+    st.error(f"failed json")
     st.stop()
     #First, I have it try to open the json file and load it.
     #After loading it onto a variable i move it into a dataframe by using pd
